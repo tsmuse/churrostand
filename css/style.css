@@ -1,5 +1,119 @@
 body {
-	background: #666;
-	font-size: 16px;
-	padding-top: 0px;
+	background-image:url('../img/bg_pattern_transparentStripes.png');
+	background-color:#EAF0F0;
+	font-size: 20px;
+	padding-top: 0;
+}
+
+.address {
+	font-size: .9em;
+}
+
+.dayOfTheWeek {
+	float: left;
+	font-size: .9em;
+	text-align: right;
+	width: 45%;
+}
+
+.btn-default {
+	background-color: #F7D57E;
+	border: 0;
+	border-radius: .5em;
+	clear: both;
+	color: #A17F29;
+	display: block;
+	float: right;
+	font-size: 1em;
+	margin: 2em 0;
+	padding: .7em;
+	text-align: center;
+	width: 26%;
+}
+
+.btn-default:hover {
+	background-color: #F07F43;
+	color: #9c4516;
+	-webkit-transition: all 0.3s ease-in-out;
+  	-moz-transition: all 0.3s ease-in-out;
+  	-ms-transition: all 0.3s ease-in-out;
+  	-o-transition: all 0.3s ease-in-out;
+}
+
+footer {
+	background: #F07F43;
+	font-size: .8em;
+	margin: 0;
+	padding: 1em 0;
+	text-align: center;
+}
+
+#hoursContainer{
+	background-color: rgba(251, 251, 244, 0.9); /* Color white with alpha 0.9*/
+	border: 5px solid #F7D57E;
+	border-radius: .5em;
+	float: right;
+	padding: 1.3em;
+	width: 26%;
+}
+
+.hoursOclock {
+	float: left;
+	font-size: .9em;
+	margin: 0 0 0 1em;
+	width: 46.5%;
+}
+
+.hoursRow {
+	margin: auto;
+	width: 100%;
+}
+
+#intro {
+	background-image:url('http://placehold.it/1150x600');
+	background-color:#cccccc;
+}
+
+#locationHours {
+	background-image:url('http://placehold.it/1150x600&text=Map');
+	background-color:#cccccc;
+	padding-right: 2em;
+}
+
+#menu {
+	background: #C5DADB;
+}
+
+nav li {
+	font-size: .8em;
+}
+
+.pIndent {
+	padding-left: 2em;
+}
+
+.row {
+	height: 30em;
+	padding: 3em 0;
+	overflow: hidden;
+}
+
+.row:first-of-type {
+	background-image:url('http://placehold.it/1150x600');
+	background-color:#cccccc;
+	height: 10em;
+	padding: 0;
+}
+
+#shop {
+	background: #779035;
+}
+
+span {
+	float: right;
+}
+
+.spanSmall {
+	float: none;
+	font-size: .6em;
 }
