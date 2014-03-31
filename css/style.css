@@ -9,11 +9,8 @@ body {
 	font-size: .9em;
 }
 
-.dayOfTheWeek {
-	float: left;
-	font-size: .9em;
-	text-align: right;
-	width: 45%;
+#banner {
+	background-color: #EAF0F0;
 }
 
 .btn-default {
@@ -21,23 +18,36 @@ body {
 	border: 0;
 	border-radius: .5em;
 	clear: both;
-	color: #A17F29;
+	color: #8f6d17;
 	display: block;
 	float: right;
 	font-size: 1em;
 	margin: 2em 0;
 	padding: .7em;
 	text-align: center;
+  	text-shadow: 1px 1px 1px rgba(251, 232, 183, 0.6);
 	width: 26%;
 }
 
 .btn-default:hover {
 	background-color: #F07F43;
-	color: #9c4516;
+	color: #893d15;
+	text-shadow: 1px 1px 1px rgba(248, 184, 149, 0.4);
 	-webkit-transition: all 0.3s ease-in-out;
   	-moz-transition: all 0.3s ease-in-out;
   	-ms-transition: all 0.3s ease-in-out;
   	-o-transition: all 0.3s ease-in-out;
+}
+
+.dayOfTheWeek {
+	float: left;
+	font-size: .9em;
+	text-align: right;
+	width: 45%;
+}
+
+.dropdown-menu li a {
+	font-size: 1.3em;
 }
 
 footer {
@@ -69,6 +79,11 @@ footer {
 	width: 100%;
 }
 
+i {
+	margin-right: .3em;
+	font-size: 1.2em;
+}
+
 #intro {
 	background-image:url('http://placehold.it/1150x600');
 	background-color:#cccccc;
@@ -84,12 +99,23 @@ footer {
 	background: #C5DADB;
 }
 
+.navbar-default {
+	background: rgba(251, 251, 244, 0.9);
+	border-top: 6px solid #F7D57E;
+	border-bottom: 5px solid #F07F43;
+	margin: 0;
+}
+
 nav li {
 	font-size: .8em;
 }
 
-.pIndent {
-	padding-left: 2em;
+.pTagline {
+	color: rgba(140, 196, 196, 0.3);
+	font-family: 'Fjalla One', sans-serif;
+	letter-spacing: .1em;
+	text-align: center;
+	text-transform: uppercase;
 }
 
 .row {
@@ -99,8 +125,6 @@ nav li {
 }
 
 .row:first-of-type {
-	background-image:url('http://placehold.it/1150x600');
-	background-color:#cccccc;
 	height: 10em;
 	padding: 0;
 }
@@ -116,4 +140,8 @@ span {
 .spanSmall {
 	float: none;
 	font-size: .6em;
+}
+
+ul {
+	list-style: none
 }
