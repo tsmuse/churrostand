@@ -9,8 +9,16 @@ body {
 	font-size: .9em;
 }
 
+.affix {
+	top:0;
+	width:100%;
+	z-index: 100000;
+}
+
 #banner {
 	background-color: #EAF0F0;
+	height: 10em;
+	padding: 0;
 }
 
 .btn-default {
@@ -52,8 +60,8 @@ body {
 
 footer {
 	background: #F07F43;
+	height: 3em;
 	font-size: .8em;
-	margin: 0;
 	padding: 1em 0;
 	text-align: center;
 }
@@ -87,6 +95,7 @@ i {
 #intro {
 	background-image:url('http://placehold.it/1150x600');
 	background-color:#cccccc;
+	height:30em;
 }
 
 #locationHours {
@@ -103,7 +112,6 @@ i {
 	background: rgba(251, 251, 244, 0.9);
 	border-top: 6px solid #F7D57E;
 	border-bottom: 5px solid #F07F43;
-	margin: 0;
 }
 
 nav li {
@@ -118,15 +126,10 @@ nav li {
 	text-transform: uppercase;
 }
 
-.row {
+#intro, #menu, #locationHours, #shop {
 	height: 30em;
 	padding: 3em 0;
 	overflow: hidden;
-}
-
-.row:first-of-type {
-	height: 10em;
-	padding: 0;
 }
 
 #shop {

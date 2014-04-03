@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="description" content="Your description goes here">
     <meta name="keywords" content="one, two, three">
-		<title>Bootstrap Template</title>
+		<title>Churros!</title>
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Coustard|Voltaire|Roboto+Condensed|Chivo|Fjalla+One' rel='stylesheet' type='text/css'>
 	</head>
-	<body data-spy="scroll" data-target="#affix-nav">
+	<body>
 		<div class="row" id="banner">
 			<div class="container">
 				<div class="col-lg-12">
@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-default" role="navigation" id="navbar">
 			<div class="container">
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="nav navbar-header">
@@ -159,7 +159,7 @@
 				</div>
 			</div>
 
-			<footer>
+			<footer class="row">
 				&copy; 2014 // Silvia Amtmann
 			</footer>
 		</div><!-- #container --> 
@@ -168,5 +168,20 @@
 		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 		<!-- Latest compiled and minified JavaScript. Load jQuery first because Bootstrap is dependent on jQ. Will also have to add http: to all src URLs because the files aren't hosted locally -->
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+		$('#navbar').affix({
+    offset: {
+      top: function() {
+      	console.log('top', $('#banner').outerHeight(true));
+      	return (this.top = $('#banner').outerHeight(true));
+      }
+      // ,
+      // bottom: function () {
+      //   return (this.bottom = $('.footer').outerHeight(true))
+      // }
+    }
+  })
+		</script>
 	</body>
 </html>
