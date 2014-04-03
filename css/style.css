@@ -1,6 +1,7 @@
 body {
 	background-image:url('../img/bg_pattern_transparentStripes.png');
 	background-color:#EAF0F0;
+	font-family: 'Fjalla+One', sans-serif;
 	font-size: 20px;
 	padding-top: 0;
 }
@@ -13,6 +14,10 @@ body {
 	top:0;
 	width:100%;
 	z-index: 100000;
+}
+
+.affix + .container {
+    padding-top:81px;
 }
 
 #banner {
@@ -59,11 +64,20 @@ body {
 }
 
 footer {
-	background: #F07F43;
+	color: #666;
 	height: 3em;
 	font-size: .8em;
-	padding: 1em 0;
+	padding: 2em 0;
 	text-align: center;
+}
+
+h1, h2 {
+	font-family: 'Coustard', serif;
+	letter-spacing: .05em;
+}
+
+#hamburger {
+	display: none;
 }
 
 #hoursContainer{
@@ -116,6 +130,8 @@ i {
 
 nav li {
 	font-size: .8em;
+	font-family: 'Coustard', serif;
+	letter-spacing: .05em;
 }
 
 .pTagline {
@@ -147,4 +163,14 @@ span {
 
 ul {
 	list-style: none
+}
+
+
+/* MOBILE STYLE */
+@media screen and (max-width: 768px) {
+	#hamburger {
+		display: inline;
+		float: right;
+		padding-right: 15px;
+	}
 }
