@@ -10,42 +10,41 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<link href='http://fonts.googleapis.com/css?family=Coustard|Voltaire|Roboto+Condensed|Chivo|Fjalla+One' rel='stylesheet' type='text/css'>
+		<!-- http://maps.googleapis.com/maps/api/staticmap?center=Venice+Beach+Boardwalk&zoom=16&size=1200x600&maptype=roadmap&markers=color:red%7Clabel:Foo%7C33.9852784,-118.4724986&sensor=false -->
 	</head>
-	<body>
+	<body data-spy="scroll" data-target=".navbar-main">
 		<div id="banner">
 			<p class="pTagline">Venice Beach, Los Angeles</p>
 		</div>
 		
-		<nav class="navbar navbar-default" role="navigation" id="navbar">
-			<div class="container">
-			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="nav navbar-header">
-			      <a class="navbar-brand" href="#">Fantasy Churro Stand</a>
-				    <ul class="nav navbar-nav" id="hamburger">
-				      	<li class="dropdown">
-				          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars fa-lg"></i></a>
-				          <ul class="dropdown-menu">
-				            <li><a href="#">Menu</a></li>
-				        		<li><a href="#">Location + Hours</a></li>
-				        		<li><a href="#">Press</a></li>
-				        		<li><a href="#">Shop</a></li>
-				          </ul>
-				        </li>
-				      </ul>
-		      </div>
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav navbar-right">
-			        <li><a href="#">Menu</a></li>
-			        <li><a href="#">Location + Hours</a></li>
-			        <li><a href="#">Shop</a></li>
-			      </ul>
-			    </div><!-- /.navbar-collapse -->
-			  </div><!-- /.container-fluid -->
-			</nav>
+		<nav class="navbar navbar-default navbar-main" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#banner">Fantasy Churro Stand</a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#menu">Menu</a></li>
+		        <li><a href="#locationHours">Location + Hours</a></li>
+		        <li><a href="#shop">Shop</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+
+
+
 
 		<div class="container">
-
 		<!-- #Intro -->
 			<div class="row" id="intro">
 				<div class="col-lg-12">
@@ -164,8 +163,9 @@
 		<!-- Latest compiled and minified JavaScript. Load jQuery first because Bootstrap is dependent on jQ. Will also have to add http: to all src URLs because the files aren't hosted locally -->
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
+
 		<script type="text/javascript">
-			$('#navbar').affix({
+			$('.navbar-main').affix({
 		    offset: {
 		      top: function() {
 		      	return (this.top = $('#banner').outerHeight(true));
