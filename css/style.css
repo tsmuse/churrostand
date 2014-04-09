@@ -148,6 +148,33 @@ nav li {
 	overflow: hidden;
 }
 
+.navbar-default .navbar-nav>li>a {
+		color: #218489;
+	}
+
+	.navbar-default .navbar-nav>li>a:hover {
+		color: #218489;
+		text-shadow: 2px 2px 0px #EAF0F0;
+	}
+
+	.navbar-default 
+	.navbar-nav>.active>a, 
+	.navbar-default .navbar-nav>.active>a, 
+	.navbar-default .navbar-nav>.active>a:focus {
+		background: #C5DADB;
+		color: #218489;
+	}
+
+	.navbar-default .navbar-nav>.active>a:hover {
+		color: #218489;
+		background: #C5DADB;
+		text-shadow: 2px 2px 0px #d1e8e9;
+		-webkit-transition: all 0.3s ease-in-out;
+	  	-moz-transition: all 0.3s ease-in-out;
+	  	-ms-transition: all 0.3s ease-in-out;
+	  	-o-transition: all 0.3s ease-in-out;
+	}
+
 #shop {
 	background: #779035;
 }
@@ -159,6 +186,10 @@ span {
 .spanSmall {
 	float: none;
 	font-size: .6em;
+}
+
+#textMenu {
+	padding: 3em 3em 0 0;
 }
 
 ul {

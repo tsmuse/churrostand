@@ -32,9 +32,10 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#menu">Menu</a></li>
-		        <li><a href="#locationHours">Location + Hours</a></li>
-		        <li><a href="#shop">Shop</a></li>
+		        <li id="linkIntro"><a href="#intro">Home</a></li>
+		        <li id="linkMenu"><a href="#menu">Menu</a></li>
+		        <li id="linkLocation"><a href="#locationHours">Location + Hours</a></li>
+		        <li id="linkShop"><a href="#shop">Shop</a></li>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
@@ -54,17 +55,17 @@
 
 		<!-- #Menu -->
 			<div class="row" id="menu">
-				<div class="col-md-7">
+				<div class="col-md-7" id="churros">
 					<h2>Menu</h2>
 					<img src="http://placehold.it/600x400&text=Churros shown here">
 				</div>
 
-				<div class="col-md-5">
+				<div class="col-md-5" id="textMenu">
 					<ul>
-						<li>Plain churro with cinnamon and sugar 
+						<li>Plain churro
 							<span>$1.00</span>
 						</li>
-						<li>Fancy, filled churro
+						<li>Filled churro
 							<span>$3.00</span>
 						</li>
 						<li>Horchata
@@ -158,6 +159,33 @@
 		      	return (this.top = $('#banner').outerHeight(true));
 		      }
 		    }
+		  });
+
+			console.log('Intro class: ' + $('#linkIntro').attr('class'));
+			console.log('Location class: ' + $('#linkLocation').attr('class'));
+
+		  $(window).scroll(function()
+		  {
+		  	if($('#linkIntro').hasClass('.active')){
+		  		if($('body').css('background-color') !== '#EAF0F0'||'rgb(234,240,240)') {
+		  			$('body').css('background-color', '#EAF0F0');
+		  		}
+		  	}
+		  	else if($('#linkMenu').hasClass('.active')){
+		  		if($('body').css('background-color') !== '#EAF0F0'||'rgb(234,240,240)') {
+		  			$('body').css('background-color', '#F7D57E');
+		  		}
+		  	}
+		  	else if($('#linkLocation').hasClass('.active')){
+		  		if($('body').css('background-color') !== '#EAF0F0'||'rgb(234,240,240)') {
+		  			$('body').css('background-color', '#F07F43');
+		  		}
+		  	}
+		  	else {
+					if($('body').css('background-color') !== '#EAF0F0'||'rgb(234,240,240)') {
+		  			$('body').css('background-color', '#779035');
+		  		}
+		  	}
 		  });
 		</script>
 	</body>
