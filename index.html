@@ -164,19 +164,24 @@
 			console.log('Intro class: ' + $('#linkIntro').attr('class'));
 			console.log('Location class: ' + $('#linkLocation').attr('class'));
 
-		  $(window).scroll(function()
+		  $(window).scroll(function(evt)
 		  {
-		  	if($('#linkIntro').hasClass('.active')){
+		  	console.log('changing BG!');
+		  	changeBG();
+		  });
+		  
+		  function changeBG(){
+		  	if($('#linkIntro').hasClass('active')){
 		  		if($('body').css('background-color') !== '#EAF0F0'||'rgb(234,240,240)') {
 		  			$('body').css('background-color', '#EAF0F0');
 		  		}
 		  	}
-		  	else if($('#linkMenu').hasClass('.active')){
+		  	else if($('#linkMenu').hasClass('active')){
 		  		if($('body').css('background-color') !== '#EAF0F0'||'rgb(234,240,240)') {
 		  			$('body').css('background-color', '#F7D57E');
 		  		}
 		  	}
-		  	else if($('#linkLocation').hasClass('.active')){
+		  	else if($('#linkLocation').hasClass('active')){
 		  		if($('body').css('background-color') !== '#EAF0F0'||'rgb(234,240,240)') {
 		  			$('body').css('background-color', '#F07F43');
 		  		}
@@ -186,7 +191,7 @@
 		  			$('body').css('background-color', '#779035');
 		  		}
 		  	}
-		  });
+		  }
 		</script>
 	</body>
 </html>
